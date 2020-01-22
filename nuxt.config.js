@@ -2,8 +2,8 @@ const colors = require('vuetify/es5/util/colors').default
 
 module.exports = {
   mode: 'universal',
-  server:{
-    port:2900
+  server: {
+    port: 2900
   },
   /*
    ** Headers of the page
@@ -40,7 +40,8 @@ module.exports = {
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/tailwindcss'
   ],
   /*
    ** Nuxt.js modules
@@ -49,11 +50,11 @@ module.exports = {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
-    'nuxt-purgecss',
+    'nuxt-purgecss'
   ],
   purgeCSS: {
     mode: 'postcss',
-    enabled:true,
+    enabled: true,
     // whitelist pattern of vuetify class names
     // content: [
     //   './src/**/*.html',
@@ -61,7 +62,16 @@ module.exports = {
     // ],
     whitelistPatterns: [/^v-*/, /^theme-*/, /^application--*/],
     whitelistPatternsChildren: [/^v-*/, /^theme-*/, /^application--*/],
-    whitelist: ['spacer', 'primary', 'secondary', 'accent', 'error', 'warning', 'info', 'success']
+    whitelist: [
+      'spacer',
+      'primary',
+      'secondary',
+      'accent',
+      'error',
+      'warning',
+      'info',
+      'success'
+    ]
   },
   /*
    ** Axios module configuration
@@ -93,7 +103,7 @@ module.exports = {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        },
+        }
       }
     }
   },
